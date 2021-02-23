@@ -1,0 +1,62 @@
+
+
+a {
+    color: yellow !important;
+}
+
+.display-4 {
+    color: yellow;
+}
+
+p {
+    color:white;
+}
+
+#basic {
+    background-color: lightgreen;
+}
+#silver {
+    background-color: blue;
+}
+#gold {
+    background-color: mediumslateblue ;
+}
+#platinum {
+    background-color: red;
+}
+
+hr {
+    color: white;
+    background-color: white;
+}
+.card > h2 {
+    color: white;
+}
+.card-body > p {
+    color: white !important;
+}
+
+.jumbotron {
+    background-color: black;
+}
+
+.lead {
+    color: yellow;
+}
+
+body {
+    background-color: black !important;
+}
+
+.navbar {
+    background-color: black !important;
+}
+
+.footer_title {
+    color: yellow;
+}
+
+
+html {
+    background-color: black;
+}
