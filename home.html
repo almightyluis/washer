@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>My Bargains</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -60,85 +62,130 @@
           </div>
 
 
-        <div class="jumbotron">
-            <h1 class="display-4 text-center">Car washes just got simpler.</h1>
-            <p class="lead text-center">Simply book and appointment, list the car make, model, year and we will have a detailer your way!</p>
+        <div class="jumbotron padding">
+            <h1 class="display-4 text-left">Car washes just got simpler.</h1>
+            <p class="lead text-left">Simply book and appointment, list the car make, model, year and we will have a detailer your way!</p>
+            <p class="lead text-left">Note: You will be charged once you accept the confirmation text/email.</p>
             <hr class="my-4">
             <div class="d-flex justify-content-center">
-              <a class="btn btn-secondary btn-lg justify-content-center" href="#" role="button">Book Appointment </a>
+              <a class="btn btn-warning btn-lg justify-content-center" href="#" role="button">Book Appointment </a>
             </div>
 
         </div>
-
-        <div class="container-fluid" id="pricingContainer">
-            <div class="row padding">
-                <div class="col-md-3 py-2">
-                    <div class="card h-100" id="basic">
-                        <h2 class="display-4 text-center">15$</h2>
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Basic (Fast Track)</h4>
-                            <p class="lead text-center"> - Foam Cannon</p>
-                            <p class="lead text-center"> - Soft Cloth Wash &amp; Buff</p>
-                            <p class="lead text-center"> - Less than 20 min Job!</p>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="col-md-3 py-2">
-                    <div class="card h-100" id="silver">
-                        <h2 class="display-4 text-center">20$</h2>
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Silver Wash</h4>
-                            <p class="lead text-center"> - Foam Cannon</p>
-                            <p class="lead text-center"> - Rim Cleaner</p>
-                            <p class="lead text-center"> - Wax Sealer</p>
-                            <p class="lead text-center"> - +Basic</p>
-                           
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-3 py-2">
-                    <div class="card h-100" id="gold">
-                        <h2 class="display-4 text-center">25$</h2>
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Gold Wash (Popular)</h4>
-                            <p class="lead text-center"> - Foam Cannon</p>
-                            <p class="lead text-center"> - Premium Soap/Wax Shampoo</p>
-                            <p class="lead text-center"> - Tire Shine</p>
-                            <p class="lead text-center"> - Rim Cleaner</p>
-                            <p class="lead text-center"> - Under Body Flush</p>
-                            <p class="lead text-center"> - Interior Shine &amp; Vacuum</p>
-                        </div>
-                    </div>
-                </div>
-            
-            
-                <div class="col-md-3 py-2">
-                    <div class="card h-100" id="platinum">
-                        <h2 class="display-4 text-center">28$</h2>
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Platinum Wash</h4>
-                            <p class="lead text-center"> - Foam Cannon</p>
-                            <p class="lead text-center"> - Hot Wax &amp; Shine</p>
-                            <p class="lead text-center"> - Citrus Sealer</p>
-                            <p class="lead text-center"> - Premium Soap/Wax Shampoo</p>
-                            <p class="lead text-center"> - Tire Shine</p>
-                            <p class="lead text-center"> - Rim Cleaner</p>
-                            <p class="lead text-center"> - Under Body Flush</p>
-                            <p class="lead text-center"> - Foam Cannon</p>
-                            <p class="lead text-center"> - Interior Clean Shine &amp; Vacuum</p>
-                            <p class="lead text-center"> - Vacuum or clean seats</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-fluid padding">
+  
+            <div class="jumbotron paddding py-4">
+              <h1 class="display-4 text-right">Current Packages</h1>
             </div>
+          
         </div>
 
-        <div class="container-fluid">
-        
+        <div class="container-fluid padding" id="pricingInformation">
+          <div class="row text-center">
+
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg container-fluid padding" type="button" data-toggle="collapse" data-target="#basicExample" aria-expanded="false" aria-controls="basicExample">
+                Basic
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg container-fluid padding" type="button" data-toggle="collapse" data-target="#goldExample" aria-expanded="false" aria-controls="goldExample">
+                Gold
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg container-fluid padding"  type="button" data-toggle="collapse" data-target="#diamondExample" aria-expanded="false" aria-controls="diamondExample">
+                Diamond
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-warning btn-lg container-fluid padding" type="button" data-toggle="collapse" data-target="#platinumExample" aria-expanded="false" aria-controls="platinumExample">
+                Platinum
+              </button>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col py-2">
+              <div class="collapse" id="basicExample">
+                <div class="card card-body">
+                  <p class="text-center">Basic Wash</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Foam Cannon</li>
+                    <li class="list-group-item">Wax/Shampoo</li>
+                    <li class="list-group-item">Hand Dry/Microfiber Towel</li>
+                    <li class="list-group-item">Vacuum</li>
+                  </ul> 
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col py-2">
+              <div class="collapse" id="goldExample">
+                <div class="card card-body">
+                  <p class="text-center">Gold Wash</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Foam Cannon</li>
+                    <li class="list-group-item">Wax/Shampoo</li>
+                    <li class="list-group-item">Hand Dry/Microfiber Towel</li>
+                    <li class="list-group-item">Vacuum</li>
+                    <li class="list-group-item">Tireshine</li>
+                    <li class="list-group-item">Clean Dash</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+            <div class="col py-2">
+              <div class="collapse" id="diamondExample">
+                <div class="card card-body">
+                  <p class="text-center">Diamond Wash</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Foam Cannon</li>
+                    <li class="list-group-item">Wax/Shampoo</li>
+                    <li class="list-group-item">Hand Dry/Microfiber Towel</li>
+                    <li class="list-group-item">Vacuum</li>
+                    <li class="list-group-item">Tireshine</li>
+                    <li class="list-group-item">Clean Dash</li>
+                    <li class="list-group-item">Clean Rims</li>
+                    <li class="list-group-item">Fresh Scent</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+            <div class="col py-2">
+              <div class="collapse" id="platinumExample">
+                <div class="card card-body">
+                  <p class="text-center">Platinum Wash</p>
+                  <p class="text-left"> Note: For platinum washes we use Chemical Guys products.</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Foam Cannon/Premium Products</li>
+                    <li class="list-group-item">Wax/Shampoo</li>
+                    <li class="list-group-item">Hand Dry/Microfiber Towel</li>
+                    <li class="list-group-item">Vacuum</li>
+                    <li class="list-group-item">Tireshine</li>
+                    <li class="list-group-item">Clean Dash</li>
+                    <li class="list-group-item">Clean Rims</li>
+                    <li class="list-group-item">Fresh Scent</li>
+                    <li class="list-group-item">Fresh Scent</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
+
+
+
+
+
+        <div class="container-fluid padding py-4">
+            <h2 class="display-4 text-left "> Check out our work </h2>
+          Images here
+        </div>
 
         <footer>
             <div class="container-fluid padding">
