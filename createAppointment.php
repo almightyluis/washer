@@ -44,10 +44,12 @@ $current_date = date("m/d/o");
     <?php
 
     if( isset($_POST['clicked']) ){
-        $currentName = $_POST['exampleEmail'];
-    }
-    echo '<p> ' + $current_date + '</p>';
+        $currentName = $_POST["exampleEmail"];
+        echo '<p> '.htmlentities($currentName).' </p>';
 
+        echo '<p> Hello This is sm=omthing that will be said</p>';
+    }
+  
     ?>
 
 

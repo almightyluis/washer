@@ -5,6 +5,9 @@ $current_date = date("m/d/o");
 
 ?>
 
+<!-- ..htmlentities().  -->
+<!-- This is the way to be able to print stuff to html via php code  -->
+
 
 <!DOCTYPE html>
 <html>
@@ -38,6 +41,13 @@ $current_date = date("m/d/o");
                 <li class="nav-item">
                   <a class="nav-link" href="#">About Us</a>
                 </li>
+                <?php
+                date_default_timezone_set("America/Los_Angeles");
+                $current_date = date("m/d/o");
+                echo '<li class="nav-item">
+                <a class="nav-link" href="#"> '.htmlentities($current_date).'</a>
+              </li>';
+                ?>
               </ul>
             </div>
         </nav>
