@@ -19,7 +19,7 @@ $current_date = date("m/d/o");
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/home.css">
-    </head>
+
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
@@ -199,10 +199,10 @@ $current_date = date("m/d/o");
                 </button>
               </div>
               <div class="modal-body">
-                <form action="makeApp.html?name=exampleFullname" method="POST">
+                <form action="createAppointment.php" method="POST">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <label for="exampleEmail">Email address</label>
+                    <input type="email" class="form-control" id="exampleEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div class="form-group">
@@ -215,7 +215,7 @@ $current_date = date("m/d/o");
                     <input type="tel" class="form-control" id="examplePhone" placeholder="(XXX) XXX XXXX">
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <input type="submit" value="Make Appointment" class="btn btn-primary" id="create_app" name="clicked" >
                 </form>
               </div>
               <div class="modal-footer">
