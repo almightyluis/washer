@@ -1,8 +1,6 @@
 
-
-
-p > .lead-list {
-    color: black !important;
+#section1 > .card > p > .lead {
+    color:black !important;
 }
 
 

@@ -68,14 +68,16 @@
             <p class="lead text-left">Note: You will be charged once you accept the confirmation text/email.</p>
             <hr class="my-4">
             <div class="d-flex justify-content-center">
-              <a class="btn btn-warning btn-lg justify-content-center" href="#" role="button">Book Appointment </a>
+              <button type="button" class="btn btn-primary btn-light btn-lg" data-toggle="modal" data-target="#makeAppointment">
+                Make Appointment
+              </button>
             </div>
 
         </div>
         <div class="container-fluid padding">
   
             <div class="jumbotron paddding py-4">
-              <h1 class="display-4 text-right">Current Packages</h1>
+              <h1 class="display-4 text-center">Current Packages</h1>
             </div>
           
         </div>
@@ -178,13 +180,115 @@
         </div>
 
 
+        <div class="modal fade" id="makeAppointment" tabindex="-1" role="dialog" aria-labelledby="makeAppointment" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="bookAppointment.php" method="POST">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
 
+
+        <!-- Inside the card we can add carousel   -->
         <div class="container-fluid padding py-4">
-            <h2 class="display-4 text-left "> Check out our work </h2>
-          Images here
+            <h2 class="display-4 text-left "> Why Choose Us? </h2>
+
+            <div class="row padding py-3">
+              
+              <div class="col-md-6">
+                <div class="card">
+                  <img class="d-block w-100 h-100" src="media/blue_bmw.jpg" alt="Second slide">
+                </div>
+
+              </div>
+              
+              <div class="col-md-6">
+                <div class="jumbotron paddding">
+                  <h2 class="lead text-center"><u> Work Ethic</u></h2>
+                  <p class="lead text-left"> We have technicians on stand by waiting to fulfill orders. </p>
+                  <p class="lead text-left"> We are our biggest critics. </p>
+                  <p class="lead text-left"> If you are fo some reason not happy with the job presented, simply email us for a refund. </p>
+                  
+                </div>
+              
+              </div>
+
+            </div>
+            <div class="row padding py-3">
+
+              <div class="col-md-6">
+
+                <div class="jumbotron paddding">
+                  <h2 class="lead text-center"> <u> Small Company </u> </h2>
+                  <p class="lead text-left"> We are a small company serving our community.</p>
+                  <p class="lead text-left"> We hire the best in their respected field.</p>
+                  <p class="lead text-left"> No corporate fees, just a flat rate! </p>
+
+                </div>
+
+              </div>
+              
+              <div class="col-md-6">
+                <div class="card">
+                  <img class="d-block w-100 h-100" src="media/carwash_rim.jpg" alt="Second slide">
+                </div>
+              
+              </div>
+
+            </div>
+
+
+            <div class="row padding py-3">
+              
+              <div class="col-md-6">
+                <div class="card">
+                  <img class="d-block w-100 h-100" src="media/van_equipment.jpg" alt="Second slide">
+                </div>
+
+              </div>
+              
+              <div class="col-md-6">
+
+                <div class="jumbotron paddding">
+                  <h3 class="lead text-center"> <u> Equipment</u> </h3>
+                  <p class="lead text-left"> Not only do we have the best emplyees, but we have awsome equipment.</p>
+                  <p class="lead text-left"> We only use top of the line equipment and products.</p>
+                  <p class="lead text-left"> Not only do we have high quality products, we also let you choose to even better brands .</p>
+
+                </div>
+                
+              </div>
+
+            </div>
         </div>
 
         <footer>
