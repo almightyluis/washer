@@ -212,17 +212,17 @@ $current_date = date("m/d/o");
                 <form action="createAppointment.php" method="POST">
                   <div class="form-group">
                     <label for="exampleEmail">Email address</label>
-                    <input type="email" class="form-control" id="exampleEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="exampleEmail" name="useremail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div class="form-group">
                     <label for="exampleFullname">Full Name</label>
-                    <input type="text" class="form-control" id="exampleFullname" placeholder="First Last">
+                    <input type="text" class="form-control" id="exampleFullname" name="userfullname" placeholder="First Last">
                   </div>
 
                   <div class="form-group">
                     <label for="examplePhone">Phone Number</label>
-                    <input type="tel" class="form-control" id="examplePhone" placeholder="(XXX) XXX XXXX">
+                    <input type="tel" class="form-control" id="examplePhone" name="userphone" placeholder="(XXX) XXX XXXX">
                   </div>
                   
                   <input type="submit" value="Make Appointment" class="btn btn-primary" id="create_app" name="clicked" >
